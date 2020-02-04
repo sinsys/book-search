@@ -1,0 +1,7 @@
+.country__selector {
+	width: 500px;
+	border-radius: 1rem 1rem 0 0;
+	padding: 1rem;
+	background: #DDD;
+	border: 1px solid #CCC;
+}
