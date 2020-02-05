@@ -43,6 +43,7 @@ class AddBookmark extends Component {
 		const {title, url, description, rating} = this.state;
 		const bookmark = {title, url, description, rating};
     const postUrl = "https://tf-ed-bookmarks-api.herokuapp.com/v3/bookmarks";
+    console.log({KEY});
     const options = {
     	method: 'POST',
     	body: JSON.stringify(bookmark),
@@ -76,6 +77,13 @@ class AddBookmark extends Component {
 	};
 
 	render() {
+		const error = this.state.error
+			? <div
+					className="error"
+				>
+					{this.state.error}
+				</div>
+			: " ";
 		return (
 			<div
 				className="addbookmark"
