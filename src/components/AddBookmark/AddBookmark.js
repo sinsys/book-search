@@ -40,10 +40,19 @@ class AddBookmark extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const {title, url, description, rating} = this.state;
-		const bookmark = {title, url, description, rating};
+		const createBookmark = ({
+			title, 
+			url, 
+			description, 
+			rating
+		}) => ({
+			title, 
+			url, 
+			description, 
+			rating
+		});
+		const bookmark = createBookmark(this.state);
     const postUrl = "https://tf-ed-bookmarks-api.herokuapp.com/v3/bookmarks";
-    console.log({KEY});
     const options = {
     	method: 'POST',
     	body: JSON.stringify(bookmark),
@@ -91,8 +100,10 @@ class AddBookmark extends Component {
 				<h2>
 					Add Bookmark
 				</h2>
+				{error}
 				<form
 					className="addbookmark__form"
+					onSubmit={e => this.handleSubmit(e)}
 				>
 					<label
 						htmlFor="title"
