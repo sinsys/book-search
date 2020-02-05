@@ -14,7 +14,9 @@ class BookmarkApp extends Component {
 				<BookmarkList
 					bookmarks={this.props.bookmarks}
 				/>
-				<Fab />
+				<Fab 
+					showForm={this.props.showForm}
+				/>
 			</div>
 		)
 	}

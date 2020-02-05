@@ -8,7 +8,7 @@ class BookmarkList extends Component {
 			.map((bookmark, i) => (
 				<Bookmark
 					{...bookmark}
-					key={i}
+					key={"bookmark-"+i}
 				/>
 			));
 		return (

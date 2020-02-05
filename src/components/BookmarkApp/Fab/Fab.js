@@ -6,6 +6,7 @@ class Fab extends Component {
 		return (
 			<div
 				className="fab"
+				onClick={e => this.props.showForm(true)}
 			>
 				&#43;
 			</div>
