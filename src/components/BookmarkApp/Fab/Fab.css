@@ -1,0 +1,18 @@
+.fab {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #5399FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: solid 1px #0049B2;
+  font-size: 24px;
+}
+
+.fab:hover {
+  box-shadow: 1px 1px 1px 1px #0049B2;
+  border: solid 1px #0049CC;
+}
